@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Document de formation</h2>
+<form [formGroup]="form" (ngSubmit)="save()" mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Intitulé</mat-label>
+    <input matInput formControlName="title" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Date de début</mat-label>
+    <input matInput type="date" formControlName="startDate" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Date de fin</mat-label>
+    <input matInput type="date" formControlName="endDate" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Durée</mat-label>
+    <input matInput formControlName="duration" required>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Organisme</mat-label>
+    <input matInput formControlName="organization">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Annuler</button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Enregistrer</button>
+  </div>
+</form>

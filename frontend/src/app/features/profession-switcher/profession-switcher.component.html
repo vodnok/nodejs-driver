@@ -1,0 +1,5 @@
+<mat-form-field>
+  <mat-select (selectionChange)="select($event.value)" [value]="(activeProfession$ | async)">
+    <mat-option *ngFor="let p of professions$ | async" [value]="p.id">{{ p.name }}</mat-option>
+  </mat-select>
+</mat-form-field>

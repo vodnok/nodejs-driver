@@ -1,0 +1,9 @@
+<div class="toolbar">
+  <button mat-raised-button color="primary" (click)="addDocument()">
+    <mat-icon>add</mat-icon> Ajouter un document
+  </button>
+</div>
+
+<div class="documents">
+  <app-document-tile *ngFor="let doc of documents$ | async" [document]="doc"></app-document-tile>
+</div>
